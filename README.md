@@ -5,6 +5,7 @@ Guía rápida de comandos esenciales para Kubernetes, Git, Docker, Argo CLI y te
 --- 
 ## 🌐 Páginas webs interesantes
 **[Limpiar y corregir manifiestos de kubernetes](https://validkube.com/)**
+
 **[Actualizaciónes sobre tecnologías](https://app.daily.dev/)**
 
 ---
@@ -32,8 +33,8 @@ Guía rápida de comandos esenciales para Kubernetes, Git, Docker, Argo CLI y te
 
 - **Crear una imagen y subirla a dockerhub**: 
   ```bash
-docker build -t imagen:tag . 
-docker push imagen:tag
+  docker build -t imagen:tag . 
+  docker push imagen:tag
   ```
 ---
 
