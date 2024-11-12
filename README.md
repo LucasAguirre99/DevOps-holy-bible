@@ -1,6 +1,11 @@
 # 📜 Holy Bible (Lucas Edition)
 
-Guía rápida de comandos esenciales para Kubernetes, Git, Docker, y Argo CLI.
+Guía rápida de comandos esenciales para Kubernetes, Git, Docker, Argo CLI y tecnologías varias.
+
+--- 
+## 🌐 Páginas webs interesantes
+**[Limpiar y corregir manifiestos de kubernetes](https://validkube.com/)**
+**[Actualizaciónes sobre tecnologías](https://app.daily.dev/)**
 
 ---
 
