@@ -25,6 +25,11 @@ Guía rápida de comandos esenciales para Kubernetes, Git, Docker, y Argo CLI.
   docker container prune
   ```
 
+- **Crear una imagen y subirla a dockerhub**: 
+  ```bash
+docker build -t imagen:tag . 
+docker push imagen:tag
+  ```
 ---
 
 ## ☸️ Kubernetes
@@ -92,3 +97,6 @@ Guía rápida de comandos esenciales para Kubernetes, Git, Docker, y Argo CLI.
 
 ---
 
+## 🐧 Linux
+
+---
