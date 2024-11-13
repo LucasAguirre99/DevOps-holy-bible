@@ -22,6 +22,8 @@ Los comandos gradle tienen diferentes funciones
 
 - ./gradlew smartbuild *Adapta todo lo compilado a tomcat*
 
+- ./gradlew prepareConfig *Aplica los cambios del gradle.properties dentro de openbravo, esto es úil cuando queremos aplicar el allow.root, para que no falle la primera ejecución*
+
 ### Gradle.properties flags
 
 Si necesitamos levantar entornos dentro de Argo, k8s o donde sólo tenemos acceso de usuario root, debemos de agregar el siguiente flag:
