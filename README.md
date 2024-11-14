@@ -103,6 +103,50 @@ Guía rápida de comandos esenciales para Kubernetes, Git, Docker, Argo CLI y te
 
 ---
 
-## 🐧 Linux
+# 🐧 Linux
+
+## Apache 
+
+- Para habilidar módulos en el servidor web de apache se utiliza el comando *a2enmod*, si queremos habilitar algún módulo en particular lo hacemos mediante:
+  ```bash
+  sudo a2enmod <Modulo>
+  ``` 
+
+Este comando va a crear un enlace simbólico entre el archivo de configuración del módulo dentro de (/etc/apache/mods-availables) al directorio de módulos habilitados(/etc/apache2/mod-enabled)
+
+- En el caso que queramos desactivar un módulo simplemente hacemos:
+  ```bash
+  sudo a2dismod <Módulo>
+  ``` 
+
+Al ejecutar este comando se elimina el enlace simbólico en mod-enabled, lo que impide que apache cargue el módulo al reiniciar o cargar
+
+- Si queremos habilitar un archivo de configuraciones de un sitio virtual en apache, lo hacemos con:
+  ```bash
+  sudo a2ensite <Mi-sitio>
+  ```
+
+Este comando habilita sitios adicionales definidos en un archivo dentro de /etc/apache2/sites-available/ para crear un enalce simbólico en sites-enabled
+
+- Para deshabilitar un sitio virtual en apache se utiliza:
+  ```bash
+  sudo a2dissite <Mi-sitio>
+  ```
+
+Este comando elimina el enlace simbólico del sitio sites-enabled, deshabilitándolo sin borrar la configuración
+
+- Habilitar un archivo de configuración general en Apache
+  ```bash
+  sudo a2enconf <Archivo-de-config>
+  ```
+
+Esto habilita configuraciones generales en /etc/apache2/conf-available, lo que permite configuraciones globales no especificas de un sitio
+
+- Deshabilitar un archivo de configuración general en apache:
+  ```bash
+  sudo a2disconf <Archivo-de-config>
+  ```
+
+Elimina el enlace simbólico en conf-enabled, evitando que apache cargue la configuración global
 
 ---
