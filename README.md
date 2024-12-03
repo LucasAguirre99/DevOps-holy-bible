@@ -89,6 +89,7 @@ Guía rápida de comandos esenciales para Kubernetes, Git, Docker, Argo CLI y te
   ```
 
 Después de esto en la consola que se habre escribir *reword* en los commits que se quieran cambiar, acto seguido nos va a dejar poner el nuevo nombre, después hacemos un push con --force
+
 ---
 
 ## 🚀 Argo CLI
