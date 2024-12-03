@@ -45,6 +45,16 @@ Dockerizar servicios:
   - docker_com.etendoerp.db_port=<port>
 ---
 
+### RX
+
+Para poder tener RX son necesarios 2 cosas, primero tenemos el etendo_base, al mismo debemos de ponerle el módulo de com.etendoerp.etendorx dentro de la carpeta de modulos. 
+
+Nos podemos clonar el entorno etendo_rx para preparlo debemos de hacer lo siguiente: 
+
+- ./gradlew generate.entities --info
+
+- ./gradlew :com.etendorx.<Servicio>:build -x test -> Este comando nos va a generar los .jar de cada uno de lo servicios, para ir a buscar dicho jar, dentro de la carpeta de etendo_rx se encuentra en modules_core/com.etendorx.<Servicio>/build/libs
+
 ## 🌐 Bibliografía y enlaces importantes
 
 **[Documentación(wiki etendo)](https://docs.etendo.software/latest/)**
