@@ -1,0 +1,78 @@
+pipeline{
+    options{
+        disableConcurrentBuilds()
+    }
+
+    environment{
+    //Environments variables
+    }
+
+    agent{
+        //static agent
+
+        kubernetes{
+            inheretFrom 'maven'
+            defaultContainer 'jnlp'
+            yaml """
+            Manifiesto
+            """
+        }
+    }
+
+    stages{
+        stage('Checkout'){
+            when{
+                //Condition
+            }
+            steps{
+                container('maven'){
+                    script{
+                        try{
+                            //Checkout code
+                            dir("folder"){
+                                //Checkout code in specific folder
+                            }
+                        }catch(Exception e){
+                            //Handle exception
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    post{
+        always{
+            //code who aways exect
+        }
+        success{
+            //code who exect when success
+        }
+        failure{
+            //code who exect when failure
+        }
+        unstable{
+            //code who exect when unstable
+        }
+        fixed{
+            //code who exect when fixed
+            //Email sender
+             mail to: EMAIL_ADDRESS,
+        subject: "✅ TRIGGERS COMPILATION FIXED - ${currentBuild.fullDisplayName}",
+      mimeType: "text/html",
+      body: """
+        <html>
+          <head>
+              <style>
+                  body { font-family: 'Arial', sans-serif; }
+                  .header { font-size: 16px; font-weight: bold; color: #333; }
+              </style>
+          </head>
+          <body>
+          </body>
+        </html>
+      """
+        }
+    }
+
+}
