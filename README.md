@@ -73,6 +73,8 @@ Guía rápida de comandos esenciales para Kubernetes, Git, Docker, Argo CLI y te
   git reset --soft HEAD~<n>
   ```
 
+Esto también se puede lograr haciendo un rebase -i y poner squash en los commits que se quieran juntar
+
 - **Volver *n* commits atrás**:
   ```bash
   git reset --hard HEAD~<n>
