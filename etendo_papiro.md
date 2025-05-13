@@ -22,6 +22,9 @@ Los comandos gradle tienen diferentes funciones
 
 - ./gradlew smartbuild *Adapta todo lo compilado a tomcat*
 
+- ./gradlew clean cleanSubfolders *Este comando es para borrar todo lo que creamos cuando hicimos los builds*
+
+
 - ./gradlew prepareConfig *Aplica los cambios del gradle.properties dentro de openbravo, esto es úil cuando queremos aplicar el allow.root, para que no falle la primera ejecución*
 
 ### Gradle.properties flags
@@ -53,7 +56,7 @@ Nos podemos clonar el entorno etendo_rx para preparlo debemos de hacer lo siguie
 
 - ./gradlew generate.entities --info
 
-- ./gradlew :com.etendorx.<Servicio>:build -x test -> Este comando nos va a generar los .jar de cada uno de lo servicios, para ir a buscar dicho jar, dentro de la carpeta de etendo_rx se encuentra en modules_core/com.etendorx.<Servicio>/build/libs
+- ./gradlew :com.etendorx.<Servicio>:build -x test --> Este comando nos va a generar los .jar de cada uno de lo servicios, para ir a buscar dicho jar, dentro de la carpeta de etendo_rx se encuentra en modules_core/com.etendorx.<Servicio>/build/libs
 
 ## 🌐 Bibliografía y enlaces importantes
 
