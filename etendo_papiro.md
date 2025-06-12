@@ -58,6 +58,18 @@ Nos podemos clonar el entorno etendo_rx para preparlo debemos de hacer lo siguie
 
 - ./gradlew :com.etendorx.<Servicio>:build -x test --> Este comando nos va a generar los .jar de cada uno de lo servicios, para ir a buscar dicho jar, dentro de la carpeta de etendo_rx se encuentra en modules_core/com.etendorx.<Servicio>/build/libs
 
+---
+### Hacer Backups en entornos de etendo 
+
+Primero tenemos que configurar el archivo '/etc/openbravo-backups.config'
+
+Después simplemente habilidar el crontab. Si queremos hacer el backup de manera manual tenemos que hacer
+
+  - etendo-backup
+
+Esto nos va a generar un backup dentro de /backups/backup-manual
+
+---
 ## 🌐 Bibliografía y enlaces importantes
 
 **[Documentación(wiki etendo)](https://docs.etendo.software/latest/)**
@@ -71,15 +83,3 @@ Nos podemos clonar el entorno etendo_rx para preparlo debemos de hacer lo siguie
 **[Argo Workflow ScaleWay](https://argoworkflows.labs.etendo.cloud/workflows)**
 
 **[Imputador](https://developer-client.futit.cloud/)**
-
----
-
-### Hacer Backups en entornos de etendo 
-
-Primero tenemos que configurar el archivo '/etc/openbravo-backups.config'
-
-Después simplemente habilidar el crontab. Si queremos hacer el backup de manera manual tenemos que hacer
-
-  - etendo-backup
-
-Esto nos va a generar un backup dentro de /backups/backup-manual

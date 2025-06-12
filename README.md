@@ -191,4 +191,9 @@ Para crear comandos simplemente podemos hacer un alias o un script
   source ~/.bashrc
   ```
 
+### Comando sed
+- Reemplazar dentro del archivo:
+  ```bash
+  sed -i "s/Palabra_a_reemplazar/${Valor_a_reemplazar}/g" archivo_donde_se_reemplaza
+  ```
 
