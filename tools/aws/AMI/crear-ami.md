@@ -36,6 +36,11 @@ VBoxManage clonemedium <file.vdi> <file.vmdk> --format VMDK --variant Stream
 
 ---
 
+### En caso de que esto de problemas por ya estar creado, lo podemos borrar
+```bash
+Cannot register the hard disk '/home/lucas/VirtualBox VMs/iso-24/iso-24.vmdk' with UUID {07417a69-2bbc-4de9-a5fb-fa86adcf20bf} already exists
+```
+
 ## ☁️ 4. Subir imagen a AWS S3
 
 Desde la consola de AWS:
