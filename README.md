@@ -174,6 +174,28 @@ Esto habilita configuraciones generales en /etc/apache2/conf-available, lo que p
 
 Elimina el enlace simbólico en conf-enabled, evitando que apache cargue la configuración global
 
+### Crear y renovar certificados
+
+- Instalamos certbot: 
+  ```bash
+  sudo apt update && apt install certbot python3-certbot-apache -y
+  ```
+
+- Habilitamos los puertos
+  ```bash
+    sudo ufw allow 80
+    sudo ufw allow 443
+  ```
+
+- Obtener los certificados: 
+  ```bash
+  sudo certbot --apache -d sub.dominio.com
+  ```
+
+- Renovación automática:
+  ```bash
+  sudo certbot renew --dry-run
+  ```
 ---
 
 ## Crear comandos
