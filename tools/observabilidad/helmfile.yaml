@@ -1,0 +1,66 @@
+# helmfile.yaml
+
+repositories:
+  - name: prometheus-community
+    url: https://prometheus-community.github.io/helm-charts
+  - name: grafana
+    url: https://grafana.github.io/helm-charts
+  - name: open-telemetry
+    url: https://open-telemetry.github.io/opentelemetry-helm-charts
+
+releases:
+  - name: kube-prom-stack
+    namespace: grafana
+    chart: prometheus-community/kube-prometheus-stack
+    values:
+      - grafana:
+          service:
+            type: LoadBalancer
+          adminPassword: admin
+
+  - name: loki
+    namespace: grafana
+    chart: grafana/loki-stack
+    values:
+      - grafana:
+          enabled: false
+        promtail:
+          enabled: true
+        loki:
+          persistence:
+            enabled: true
+            size: 10Gi
+
+  - name: tempo
+    namespace: grafana
+    chart: grafana/tempo
+
+  - name: otel-collector
+    namespace: grafana
+    chart: open-telemetry/opentelemetry-collector
+    values:
+      - image:
+          repository: otel/opentelemetry-collector
+          tag: "0.98.0"
+        mode: deployment
+        config:
+          receivers:
+            otlp:
+              protocols:
+                grpc: {}
+                http: {}
+          exporters:
+            logging:
+              verbosity: detailed
+            otlp:
+              endpoint: tempo:4317
+              tls:
+                insecure: true
+          service:
+            telemetry:
+              metrics:
+                address: 0.0.0.0:8889
+            pipelines:
+              traces:
+                receivers: [otlp]
+                exporters: [logging, otlp]
