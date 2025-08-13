@@ -180,6 +180,18 @@ Esto habilita configuraciones generales en /etc/apache2/conf-available, lo que p
 
 Elimina el enlace simbólico en conf-enabled, evitando que apache cargue la configuración global
 
+## Vim
+
+- Mover al inicio: **gg**
+
+- Borrar n lineas: **ndd**
+
+- Borrar todo el archivo: **dG**
+
+- Cerrar y guardar: **:wq**
+
+- Cerrar: **:q**
+
 ### Crear y renovar certificados
 
 - Instalamos certbot: 
