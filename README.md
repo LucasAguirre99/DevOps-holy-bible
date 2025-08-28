@@ -180,6 +180,14 @@ Esto habilita configuraciones generales en /etc/apache2/conf-available, lo que p
 
 Elimina el enlace simbólico en conf-enabled, evitando que apache cargue la configuración global
 
+- Ver toda la configuración de apache: 
+  ```bash
+  apache2ctl -S
+  apache2ctl -t #Revisar la configuración y sintaxis
+  ```
+
+
+
 ## Vim
 
 - Mover al inicio: **gg**
