@@ -266,3 +266,13 @@ Para crear comandos simplemente podemos hacer un alias o un script
   ```bash
   pg_restore -U user -d base_de_datos -c backup.dump
   ```
+
+---
+
+# Problemas comunes
+
+  - Tomcat no arranca: Puede ser debido a que tenga problemas con los archivos temporales
+      ```
+        sudo rm -f /tmp/tomcat.pid
+        sudo rm -rf /var/lib/tomcat/temp/*
+      ```
