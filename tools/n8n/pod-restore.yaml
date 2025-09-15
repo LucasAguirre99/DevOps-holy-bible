@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: n8n-restore
+  namespace: n8n
+spec:
+  restartPolicy: Never
+  containers:
+    - name: restore
+      image: alpine:3.20
+      command: ["/bin/sh", "-c"]
+      args:
+        - |
+          echo "📦 Restaurando backup...";
+          tar xzf /backup/n8n-backup-2025-09-13_02-00-21.tar.gz -C /restore;
+          echo "✅ Backup restaurado en /restore";
+          ls -lh /restore
+      volumeMounts:
+        - name: backup
+          mountPath: /backup
+        - name: restore
+          mountPath: /restore
+  volumes:
+    - name: backup
+      persistentVolumeClaim:
+        claimName: n8n-backup-pvc   # PVC donde guardaste los backups
+    - name: restore
+      persistentVolumeClaim:
+        claimName: n8n-restore-pvc  # PVC limpio donde haremos la restauración

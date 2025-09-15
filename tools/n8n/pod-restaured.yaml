@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: n8n-restore-deploy
+  namespace: n8n
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: n8n-restore
+  template:
+    metadata:
+      labels:
+        app: n8n-restore
+    spec:
+      containers:
+        - name: n8n
+          image: n8nio/n8n:1.111.0
+          ports:
+            - containerPort: 5678
+          volumeMounts:
+            - name: restore
+              mountPath: /home/node/.n8n
+      volumes:
+        - name: restore
+          persistentVolumeClaim:
+            claimName: n8n-restore-pvc
