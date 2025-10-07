@@ -100,6 +100,8 @@ Esto también se puede lograr haciendo un rebase -i y poner squash en los commit
   git rebase -i HEAD~n
   ```
 
+Después de esto en la consola que se habre escribir *reword* en los commits que se quieran cambiar, acto seguido nos va a dejar poner el nuevo nombre, después hacemos un push con --force
+
 - **Mover elementos entre ramas** 
   ```bash
   git restore --source <branch> carpeta_seleccionada/
@@ -110,9 +112,6 @@ Esto también se puede lograr haciendo un rebase -i y poner squash en los commit
   git branch -D <branch>
   git push origin --delete <nombre_de_la_rama_remota>
   ```
-
-  
-Después de esto en la consola que se habre escribir *reword* en los commits que se quieran cambiar, acto seguido nos va a dejar poner el nuevo nombre, después hacemos un push con --force
 
 ---
 
