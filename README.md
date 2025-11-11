@@ -113,6 +113,17 @@ Después de esto en la consola que se habre escribir *reword* en los commits que
   git push origin --delete <nombre_de_la_rama_remota>
   ```
 
+- **Multiples copias del mismo repositorio**
+  ```bash
+  git worktree add ../<new-folder> <branch>
+  #Listar los worktrees que tenemos
+  git worktree list
+  #Borrar una carpeta cuando ya no nos sirva
+  git worktree remove ../<new-folder>
+  ```
+
+Esto lo que va hacer es crear una carpeta con el nombre que nosotros queremos en la rama que nos interesa, sin la necesidad de tener que hacer un clone de nuevo. Con esto logramos tener varias carpetas con distintas ramas.
+
 ---
 
 ## 🚀 Argo CLI
