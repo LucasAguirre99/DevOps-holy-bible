@@ -36,3 +36,18 @@ Dentro del archivo debo de encontrar y reemplazar la linea que dice:
 ```bash
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
+
+## Paso 7: Instalar Nerd Fonts (Recomendado para iconos completos)
+Las `fonts-powerline` básicas a veces no incluyen todos los glifos. Para una experiencia perfecta en P10k, instalamos MesloLGS NF vía consola:
+
+```bash
+	mkdir -p ~/.local/share/fonts
+	wget -P ~/.local/share/fonts/ [https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
+	wget -P ~/.local/share/fonts/ [https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
+	wget -P ~/.local/share/fonts/ [https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
+	wget -P ~/.local/share/fonts/ [https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+	fc-cache -fv
+```
+
+
+
