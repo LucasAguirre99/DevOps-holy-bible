@@ -1,8 +1,6 @@
 site_name: Lucas Aguirre | DevOps Engineer
 site_description: DevOps & Cloud Infrastructure Engineer - Portfolio and reference guide
 site_author: Lucas Aguirre
-docs_dir: .
-site_dir: site
 
 theme:
   name: material

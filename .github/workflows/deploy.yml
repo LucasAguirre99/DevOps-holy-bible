@@ -7,10 +7,16 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -19,11 +25,38 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-          cache: pip
+          python-version: '3.12'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build and deploy
-        run: mkdocs gh-deploy --force
+      - name: Prepare docs directory
+        run: |
+          mkdir -p docs
+          # Directorios de documentacion
+          for d in kubernetes docker helm git ci-cd terraform monitoring databases networking ansible tools Ciberseguridad assets; do
+            [ -d "$d" ] && cp -r "$d" docs/
+          done
+          # Archivos markdown de la raiz
+          for f in index.md sysadmin-linux.md etendo_papiro.md install-zsh-power10k.md; do
+            [ -f "$f" ] && cp "$f" docs/
+          done
+
+      - name: Build site
+        run: mkdocs build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
