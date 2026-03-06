@@ -111,6 +111,25 @@
   color: var(--md-primary-fg-color);
 }
 
+/* Language switcher */
+.lang-switcher {
+  margin: 0.8rem 0 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.lang-switcher a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.lang-switcher a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
   .cv-header h1 {

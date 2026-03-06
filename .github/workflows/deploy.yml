@@ -34,7 +34,7 @@ jobs:
         run: |
           mkdir -p docs
           # Directorios de documentacion
-          for d in kubernetes docker helm git ci-cd terraform monitoring databases networking ansible tools Ciberseguridad assets; do
+          for d in kubernetes docker helm git ci-cd terraform monitoring databases networking ansible tools Ciberseguridad assets en fr; do
             [ -d "$d" ] && cp -r "$d" docs/
           done
           # Archivos markdown de la raiz

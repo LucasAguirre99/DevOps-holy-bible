@@ -9,11 +9,15 @@ hide:
 
 **DevOps & Cloud Infrastructure Engineer**
 
-AWS · Kubernetes · Jenkins · Terraform · Docker · Argo
+Kubernetes · Jenkins · Argo CD · Docker · Helm · AWS
+
+<div class="lang-switcher" markdown>
+**🌐** &nbsp; **ES** &nbsp;·&nbsp; [EN](en/) &nbsp;·&nbsp; [FR](fr/)
+</div>
 
 [:fontawesome-brands-linkedin: LinkedIn](https://linkedin.com/in/lucas-aguirre-99-ar){ .md-button .md-button--primary }
 [:fontawesome-solid-envelope: Email](mailto:aguirrelucas.unrc@gmail.com){ .md-button }
-[:fontawesome-solid-file-pdf: Download CV](assets/CV-2026-DevOps-ENG.pdf){ .md-button }
+[:fontawesome-solid-file-pdf: Descargar CV](assets/CV-2026-DevOps-ENG.pdf){ .md-button }
 
 </div>
 
@@ -21,9 +25,7 @@ AWS · Kubernetes · Jenkins · Terraform · Docker · Argo
 
 ## Sobre mi
 
-Ingeniero en Telecomunicaciones especializado en DevOps con experiencia en automatizacion de infraestructura y despliegue continuo. Apasionado por optimizar procesos utilizando Kubernetes, Jenkins y herramientas CI/CD para mejorar la eficiencia operacional.
-
-Actualmente trabajando en **Futit Services** como DevOps Engineer, gestionando infraestructura con Jenkins, Docker, Argo CD, Argo Workflow y Kubernetes, ademas de escribir codigo Python para automatizar procesos.
+Ingeniero en Telecomunicaciones especializado en DevOps con experiencia integral en gestión de infraestructura cloud, orquestación de contenedores y entrega continua. Trabajo día a día con Kubernetes, Jenkins, Argo CD, Argo Workflows, Docker, Helm y AWS, con foco en automatizar procesos, garantizar la disponibilidad de los servicios y optimizar los pipelines CI/CD.
 
 ---
 
@@ -34,52 +36,53 @@ Actualmente trabajando en **Futit Services** como DevOps Engineer, gestionando i
 <div class="skill-card" markdown>
 **Orquestacion y Contenedores**
 
-- :simple-kubernetes: Kubernetes
-- :fontawesome-brands-docker: Docker / Docker Compose
-- :simple-helm: Helm
+- Kubernetes (k9s, Helm, Helmfile)
+- Docker / Docker Compose
+- Gestion de registros de imagenes (ECR)
 </div>
 
 <div class="skill-card" markdown>
 **CI/CD y GitOps**
 
-- :simple-jenkins: Jenkins
-- :simple-argo: Argo CD
-- :simple-argo: Argo Workflows
-- :fontawesome-brands-github: GitHub Actions
+- Jenkins (Declarative Pipelines)
+- Argo CD
+- Argo Workflows
+- GitHub Actions
 </div>
 
 <div class="skill-card" markdown>
-**Cloud e IaC**
+**Cloud**
 
-- :fontawesome-brands-aws: AWS (EC2, S3, IAM, EKS, ECR)
-- :simple-terraform: Terraform
-- :simple-ansible: Ansible
+- AWS: EC2, S3, IAM, ECR, EKS
+- DigitalOcean, Scaleway
+- Secrets Manager, Parameter Store
 </div>
 
 <div class="skill-card" markdown>
-**Monitoring y Observabilidad**
+**Observabilidad**
 
-- :simple-prometheus: Prometheus
-- :simple-grafana: Grafana
-- :simple-loki: Loki
-- :simple-zabbix: Zabbix
+- Prometheus + PromQL
+- Grafana
+- Loki + LogQL
+- Alertmanager
 </div>
 
 <div class="skill-card" markdown>
-**Sistemas y Scripting**
+**Sistemas y Automatizacion**
 
-- :fontawesome-brands-linux: Linux (Ubuntu / RHEL)
-- :simple-gnubash: Bash scripting
-- :fontawesome-brands-python: Python
-- :simple-git: Git
+- Linux (Ubuntu / Debian / RHEL)
+- Bash scripting
+- Python
+- Ansible
+- PostgreSQL
 </div>
 
 <div class="skill-card" markdown>
 **Idiomas**
 
-- :flag_ar: Espanol (Nativo)
-- :flag_gb: Ingles B1
-- :flag_fr: Frances B2
+- Espanol — Nativo
+- Ingles — B1
+- Frances — B2
 </div>
 
 </div>
@@ -94,26 +97,61 @@ Actualmente trabajando en **Futit Services** como DevOps Engineer, gestionando i
 ### :material-briefcase: Futit Services
 **DevOps Engineer** · Marzo 2024 – Presente
 
-- Gestion de infraestructura usando Jenkins, Docker, Argo CD, Argo Workflows y Kubernetes
-- Automatizacion de procesos con Python
-- Administracion de pipelines CI/CD y despliegues en entornos productivos
-- Trabajo con infraestructura en AWS y clusters de Kubernetes en DigitalOcean y Scaleway
+Responsable de la infraestructura DevOps de los entornos de produccion y desarrollo. Gestiono el ciclo completo: desde el build de la imagen hasta el despliegue en produccion, el monitoreo y las alertas.
+
+**Kubernetes y contenedores**
+
+- Administracion de clusters de Kubernetes en DigitalOcean y Scaleway
+- Gestion de Deployments, Services, Ingress, ConfigMaps, Secrets, PVCs y HPAs
+- Troubleshooting de pods y analisis de recursos con k9s
+- Build de imagenes Docker (multi-stage), gestion de tags y publicacion en registros privados
+
+**CI/CD y GitOps**
+
+- Diseno e implementacion de pipelines CI/CD con Jenkins (Declarative Pipelines): build, test, push y deploy
+- GitOps con Argo CD: gestion de Applications, sync automatico, self-heal y rollbacks
+- Automatizacion de tareas programadas y workflows con Argo Workflows: DAGs, CronWorkflows y WorkflowTemplates reutilizables
+- Automatizacion de flujos de trabajo con GitHub Actions
+
+**Despliegue de aplicaciones**
+
+- Despliegue y gestion del ciclo de vida de aplicaciones con Helm (install, upgrade, rollback)
+- Gestion de multiples releases y entornos con Helmfile
+- Mantenimiento y creacion de charts propios
+
+**Observabilidad**
+
+- Stack de monitoreo completo: Prometheus, Grafana y Loki
+- Escritura de consultas PromQL y LogQL para dashboards y alertas
+- Configuracion de Alertmanager: reglas, rutas y notificaciones
+
+**Infraestructura Cloud (AWS)**
+
+- Gestion de instancias EC2, buckets S3, permisos IAM, repositorios ECR y clusters EKS
+- Creacion de AMIs personalizadas para estandarizar despliegues
+- Gestion de secretos con AWS Secrets Manager y SSM Parameter Store
+
+**Sistemas y Automatizacion**
+
+- Administracion de servidores Linux: firewall (UFW), certificados SSL/TLS (certbot/OpenSSL), cron jobs, systemd
+- Automatizacion de configuracion de infraestructura con Ansible (playbooks, roles, vault)
+- Scripting con Python y Bash para tareas operativas y automatizacion de procesos
+- Administracion de bases de datos PostgreSQL: backups, restore, diagnostico de performance
+- Backups automatizados de aplicaciones en Kubernetes
 </div>
 
 <div class="timeline-item" markdown>
 ### :material-domain: Emprinet 4.0
 **Pasantia DevOps** · Febrero 2024 – Junio 2024
 
-- Despliegue de microservicios usando estrategias DevOps
-- Clustering con Kubernetes, Jenkins y ecosistema DevOps
+Despliegue de microservicios aplicando estrategias DevOps y clustering con Kubernetes. Primeros pasos con Jenkins, Docker y el ecosistema CI/CD.
 </div>
 
 <div class="timeline-item" markdown>
-### :material-school: Laboratorio de Radiocomunicaciones - UNRC
+### :material-school: Laboratorio de Radiocomunicaciones — UNRC
 **Ayudante de Laboratorio** · 2021 – 2023
 
-- Participacion en proyecto de virtualizacion del laboratorio
-- Proyectos de radiocomunicaciones
+Participacion en el proyecto de virtualizacion del laboratorio. Desarrollo de proyectos de radiocomunicaciones.
 </div>
 
 </div>
@@ -151,7 +189,7 @@ Actualmente trabajando en **Futit Services** como DevOps Engineer, gestionando i
 
 ## DevOps Reference Bible
 
-Este sitio tambien incluye mi guia de referencia personal con comandos, configuraciones y procedimientos del dia a dia en DevOps. Usa la navegacion superior para explorarla.
+Este sitio tambien contiene mi guia de referencia personal con comandos y procedimientos del dia a dia.
 
 | Seccion | Descripcion |
 |---------|-------------|
@@ -159,11 +197,10 @@ Este sitio tambien incluye mi guia de referencia personal con comandos, configur
 | [Docker](docker/docker.md) | Imagenes, contenedores, compose, Dockerfile |
 | [Helm](helm/helm.md) | Install, upgrade, rollback, helmfile |
 | [CI/CD](ci-cd/ci-cd.md) | Jenkins pipelines y GitHub Actions |
-| [Terraform](terraform/terraform.md) | IaC, plan, apply, modules |
 | [Monitoring](monitoring/monitoring.md) | Prometheus, Grafana, Loki, Alertmanager |
 | [AWS CLI](tools/aws/aws-cli.md) | EC2, S3, IAM, EKS, ECR y mas |
 | [Argo](tools/argo/argo.md) | Argo CD y Argo Workflows |
 | [Ansible](ansible/ansible.md) | Playbooks, roles, vault |
-| [Databases](databases/databases.md) | PostgreSQL, MySQL, Redis, MongoDB |
+| [Databases](databases/databases.md) | PostgreSQL, MySQL, Redis |
 | [Networking](networking/networking.md) | SSH, DNS, firewall, nginx |
 | [Linux](sysadmin-linux.md) | Sysadmin, systemd, disco, cron, SSL |
