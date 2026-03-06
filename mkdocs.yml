@@ -61,7 +61,7 @@ nav:
   - Argo: tools/argo/argo.md
   - Ansible: ansible/ansible.md
   - VMs: tools/VMs/qemu-guide.md
-  - Etendo: etendo_papiro.md
+  # - Etendo: etendo_papiro.md  <- comentado: contiene URLs internas de empresa
 
 markdown_extensions:
   - pymdownx.highlight:
