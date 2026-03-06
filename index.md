@@ -180,6 +180,7 @@ Participacion en el proyecto de virtualizacion del laboratorio. Desarrollo de pr
 
 ## Certificaciones y Formaciones
 
+- :material-certificate: Cibersecurity - Ethical Hacking *(En curso)*
 - :material-certificate: AWS Certified Developer Associate DVA-C02 *(En curso)*
 - :material-certificate: DevOps con Docker, Jenkins, Kubernetes, Git, GitFlow, CI/CD
 - :material-certificate: SO Linux para avanzados

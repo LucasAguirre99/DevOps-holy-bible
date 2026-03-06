@@ -1,3 +1,13 @@
+/* Center main content (compensate for MkDocs Material TOC right-sidebar offset) */
+.md-content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.md-main__inner {
+  justify-content: center;
+}
+
 /* CV Header */
 .cv-header {
   text-align: center;
